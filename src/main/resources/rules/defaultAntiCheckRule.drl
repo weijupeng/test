@@ -126,6 +126,7 @@ end
 
 // 7.剔除特殊渠道
 rule "specialChannelRefuseRule"
+salience 400
   when
     $output:AntiCheckOutput()
     $input:AntiCheckInput(dataSources matches "wacai[\\s\\S]*" || specialChannelFilterDataSource contains dataSources)
